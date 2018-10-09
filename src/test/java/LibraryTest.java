@@ -47,4 +47,12 @@ public class LibraryTest {
         library.checkCapacityBeforeAddBook(book4);
         assertEquals(3, library.getBookCount());
     }
+
+    @Test
+    public void getGenreCount() {
+        library.checkCapacityBeforeAddBook(book1);
+        library.checkCapacityBeforeAddBook(book2);
+        library.checkCapacityBeforeAddBook(book3);
+        assertEquals(2, library.getGenreCount("Fiction"));
+    }
 }
