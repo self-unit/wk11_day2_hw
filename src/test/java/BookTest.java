@@ -20,4 +20,9 @@ public class BookTest {
     public void hasAuthor() {
         assertEquals("William Gibson", book.getAuthor());
     }
+
+    @Test
+    public void hasGenre() {
+        assertEquals("Sci-Fi", book.getGenre());
+    }
 }
