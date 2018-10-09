@@ -13,11 +13,17 @@ public class Library {
         return stock.size();
     }
 
-    public boolean addBook(Book book) {
-        return stock.add(book);
+    public void addBook(Book book) {
+        stock.add(book);
+        capacity -= 1;
     }
 
     public int getCapacity() {
         return this.capacity;
+    }
+    public void checkCapacityBeforeAddBook(Book book) {
+        if (this.capacity >= 1) {
+            addBook(book);
+        }
     }
 }

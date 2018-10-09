@@ -21,7 +21,8 @@ public class LibraryTest {
 
     @Test
     public void addBook() {
-        assertEquals(true, library.addBook(book1));
+        library.addBook(book1);
+        assertEquals(1, library.getBookCount());
     }
 
     @Test
@@ -29,12 +30,20 @@ public class LibraryTest {
         library.addBook(book1);
         library.addBook(book2);
         library.addBook(book3);
-        library.addBook(book4);
-        assertEquals(4, library.getBookCount());
+        assertEquals(3, library.getBookCount());
     }
 
     @Test
     public void getCapacity() {
         assertEquals(3, library.getCapacity());
+    }
+
+    @Test
+    public void addBookFalse() {
+        library.checkCapacityBeforeAddBook(book1);
+        library.checkCapacityBeforeAddBook(book2);
+        library.checkCapacityBeforeAddBook(book3);
+        library.checkCapacityBeforeAddBook(book4);
+        assertEquals(3, library.getBookCount());
     }
 }
