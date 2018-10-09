@@ -16,6 +16,7 @@ public class LibraryTest {
         book2 = new Book("Life of Pi", "Yann Martel", "Fiction");
         book3 = new Book("Candide", "Voltaire", "Fiction");
         book4 = new Book("Democracy in America", "Alexis de Tocqueville", "Non-Fiction");
+
         library = new Library();
     }
 

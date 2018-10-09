@@ -13,6 +13,10 @@ public class Library {
         return stock.size();
     }
 
+    public Object giveBook(Book book) {
+        return stock.remove(book);
+    }
+
     public void addBook(Book book) {
         stock.add(book);
         capacity -= 1;
